@@ -1,0 +1,12 @@
+{
+  "name": "wappshare",
+  "version": "0.0.1",
+  "main": "app.js",
+  "dependencies": {
+    "express": "^4.16.4",
+    "http-server": "^0.11.1",
+    "nodemailer": "^4.7.0",
+    "socket.io": "^2.2.0",
+    "websocket": "^1.0.28"
+  }
+}
