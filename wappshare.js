@@ -145,14 +145,14 @@ $(function () {
     sessionStatus = "terminated";
     $("#btnEndGrp").hide();
     showStatusMsg();
-    socket.emit('server', JSON.stringify({ role: 'server', type: 'server-terminated', uid }));
+    socket.emit( JSON.stringify({ role: 'server', type: 'server-terminated', uid }));
     //showStartSession();
   });
 
   $(document).on('click', '#btnSend', function (e) {
     var to = $("#custEmail").val();
     if (to !== '' && to !== undefined) {
-      socket.emit('server', JSON.stringify({ role: 'server', type: 'email', uid, to, link: shareLink }));
+      socket.emit(JSON.stringify({ role: 'server', type: 'email', uid, to, link: shareLink }));
     }
   });
 
@@ -167,7 +167,7 @@ $(function () {
     showStatusMsg();
 
     socket=io();
-    socket.emit('server', JSON.stringify({ role: 'server', type: 'register', uid }));
+    socket.emit(JSON.stringify({ role: 'server', type: 'register', uid }));
 
     chk.show();
     btn.show();
@@ -259,7 +259,7 @@ $(function () {
   var sendData = function (eleName, eleVal, eleType, evtType, eleLabel, allowInput, type) {
     var evtData = { role: 'server', uid, eleName, eleVal, eleType, evtType, eleLabel, "allow-data-input": !!allowInput, type };
     if (sessionStatus = "in-progress")
-      socket.emit('server', JSON.stringify(evtData));
+      socket.emit( JSON.stringify(evtData));
   }
 
   var publishEvent = function (e) {
