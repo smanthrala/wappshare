@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" >
+
+  <style>
+    .focus-field{
+      box-shadow: 0 0 3px 2px rgba(228,121,17,.5);
+      border-color: #e77600;
+    }
+  </style>
+  <title>User Form - View</title>
+</head>
+
+<body class="bg-light">
+
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 mb-3">
+      &nbsp;
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12 mb-3">
+       &nbsp;
+      </div>
+    </div>
+
+    <div class="row" id="sessionIdDiv">
+      <div class="col-md-4 mb-3">SessionId:</div>
+      <div class="col-md-8 mb-3"><input type="text" class="form-control show-data" id="uid" size="30"></div>
+    </div>
+
+    <div class="row"  id="register">
+      <div class="col-md-4 mb-3">Authorization Key</div>
+      <div class="col-md-4 mb-3"><input type="text" class="form-control show-data" id="key" size="30"></div>
+      <div class="col-md-4 mb-3"><button id="btnView" class="btn btn-primary">Enter</button></div>     
+    </div>
+
+
+  <div>
+    <div id="content"></div>
+  </div>
+
+            <!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" data-backdrop="static">
+  <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-body"></div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary btnPopup btnNo" data-dismiss="modal">Don't Agree</button>
+        <button type="button" class="btn btn-primary btnPopup btnYes" data-dismiss="modal">I Agree</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" ></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" ></script>
+    <script src="./view.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.js"></script>
+</body>
+
+</html>
